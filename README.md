@@ -1,8 +1,7 @@
-# Article name here
+# How to share Resources between Stacks in AWS CDK
 
 A repository for an article on
-[bobbyhadz.com](https://bobbyhadz.com/blog/aws-s3-presigned-url-react)
-`<- Update Link`
+[bobbyhadz.com](https://bobbyhadz.com/blog/aws-cdk-share-resources-between-stacks)
 
 ## How to Use
 
@@ -14,17 +13,21 @@ A repository for an article on
 npm install
 ```
 
-3. Create the CDK stack
+3. Deploy the stacks in the following order
 
 ```bash
-npx cdk deploy
+npx cdk deploy bucket-stack
+
+npx cdk deploy lambda-stack
 ```
 
 4. Open the AWS CloudFormation Console and the stack should be created in your
    default region
 
-5. Cleanup
+5. Cleanup - Delete the stacks in the following order
 
 ```bash
-npx cdk destroy
+npx cdk destroy lambda-stack
+
+npx cdk destroy bucket-stack
 ```
