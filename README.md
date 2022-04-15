@@ -3,6 +3,8 @@
 A repository for an article on
 [bobbyhadz.com](https://bobbyhadz.com/blog/aws-cdk-share-resources-between-stacks)
 
+> If you use CDK v1, switch to the cdk-v1 branch
+
 ## How to Use
 
 1. Clone the repository
@@ -16,9 +18,9 @@ npm install
 3. Deploy the stacks in the following order
 
 ```bash
-npx cdk deploy bucket-stack
+npx aws-cdk deploy bucket-stack
 
-npx cdk deploy lambda-stack
+npx aws-cdk deploy lambda-stack
 ```
 
 4. Open the AWS CloudFormation Console and the stack should be created in your
@@ -27,7 +29,7 @@ npx cdk deploy lambda-stack
 5. Cleanup - Delete the stacks in the following order
 
 ```bash
-npx cdk destroy lambda-stack
+npx aws-cdk destroy lambda-stack
 
-npx cdk destroy bucket-stack
+npx aws-cdk destroy bucket-stack
 ```
