@@ -33,7 +33,7 @@ export class LambdaStack extends cdk.Stack {
     cdk.Tags.of(bucket).add('department', 'accounting');
 
     const lambdaFunction = new lambda.Function(this, 'lambda-function', {
-      runtime: lambda.Runtime.NODEJS_16_X,
+      runtime: lambda.Runtime.NODEJS_18_X,
       handler: 'index.main',
       code: lambda.Code.fromAsset(path.join(__dirname, '/../src/my-lambda')),
       environment: {
